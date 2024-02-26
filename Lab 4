@@ -1,0 +1,46 @@
+#Module 4 Lab 4
+#Scott Leyda
+#2/26/24
+#A program to calculate bonuses based off sales
+
+#declare local variables
+monthlySales = 0 #monthly sales amount
+storeBonus = 0 #store bonus amount
+empBonus = 0 #employeee bonus amount
+salesInc = 0 #percentage of sales increase amount
+prompt = 'What were the monthly sales for the store?' 
+
+#this code gets the monthly sales
+monthlySales = float(input(prompt))
+
+#this code determines the store bonus
+if monthlySales >= 110000:
+    storeBonus = 6000
+elif monthlySales >= 100000:
+    storeBonus = 5000
+elif monthlySales >= 90000:
+    storeBonus = 4000
+elif monthlySales >= 80000:
+    storeBonus = 3000
+else:
+    storeBonus = 0    
+    
+#this code gets the percentage increase in sales
+salesInc = float(input('What was the increase in sales from last month?'))
+salesInc = salesInc / 100
+
+#this code determines the employee bonus
+if salesInc >= .05:
+    empBonus = 75
+elif salesInc >= .04:
+    empBonus = 50
+elif salesInc >= .03:
+    empBonus = 40
+else:
+    empBonus = 0
+    
+# This code prints the bonus information
+print("The store bonus amount is $", storeBonus)
+print("The employee bonus amount is $", empBonus)
+if (storeBonus == 6000 ) and (empBonus == 75):
+	print('Congrats! You have reached the highest bonus amounts possible! ')
