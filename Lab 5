@@ -1,0 +1,26 @@
+#Scott Leyda
+#15 Mar 24
+#Program to track bottle collection and payouts for a grocery store
+
+#Declare local variables
+totalBottles = 0
+counter = 1
+todayBottles = 0
+totalPayout = 0
+keepGoing = 'y'
+
+#This program tracks bottle collection for the week
+while keepGoing == 'y':
+     while counter <=7:
+        todayBottles = int(input('What is the number of bottles collected today?'))
+        totalBottles = totalBottles + todayBottles
+        totalPayout = totalBottles * .1
+        print('The total number of bottles is',(totalBottles))
+        print(f'The total payout is ${totalPayout:.2f}')
+        counter = counter + 1
+     keepGoing = input('Would you like to enter another weeks worth of data? (Enter y or n)')
+     if keepGoing == 'y':
+         counter = 1
+         totalBottles = 0
+         todayBottles = 0
+         totalPayout = 0
