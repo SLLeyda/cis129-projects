@@ -18,3 +18,10 @@ with open('grades.txt', mode='r') as grades:
         average = totalGrade/numGrade
         
 print(f'{totalGrade}, {numGrade}, {average:.2f}')
+
+import csv
+
+with open ('grades.csv', mode='w', newline='') as grades2:
+    writer = csv.writer(grades2)
+    writer.writerow(['Scott', 'Leyda', 98, 99, 85])
+    writer.writerow(['John', 'Doe', 88, 98, 92])
