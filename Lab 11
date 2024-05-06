@@ -1,0 +1,20 @@
+#Scott Leyda
+#6 May 24
+#Writing text files lab
+
+totalGrade = 0
+numGrade = 0
+
+with open('grades.txt', mode='w') as grades:
+    grades.write('98\n')
+    grades.write('84\n')
+    grades.write('75\n')
+
+
+with open('grades.txt', mode='r') as grades:
+    for record in grades:
+        totalGrade = totalGrade + int(record)
+        numGrade += 1
+        average = totalGrade/numGrade
+        
+print(f'{totalGrade}, {numGrade}, {average:.2f}')
